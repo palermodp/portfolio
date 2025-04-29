@@ -20,6 +20,20 @@
   color: #1B4D3E; 
   font-size: 2.2rem;
   margin-bottom: 1rem;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.about-text h2::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  left: 15%;
+  transform: translateX(-50%);
+  width: 10%;
+  height: 3px;
+  background-color: #1B4D3E;
+  border-radius: 2px;
 }
 
 .about-text p {
@@ -32,24 +46,27 @@
 .about-image {
   flex: 1;
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
 .profile-image {
-  width: 300px;
-  height: 300px;
-  object-fit: contain;
-  border-radius: 50%;
-  box-shadow: 0 4px 8px rgba(27, 77, 62, 0.2);  
+  width: 100%;
+  height: auto;
+  max-width: 200px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(27, 77, 62, 0.2);
   transition: transform 0.3s ease;
-  padding: 10px;
-  background-color: #ffffff;
-  border: 3px solid #1B4D3E; 
+  padding: 0; 
+  background-color: transparent; 
+  border: none; 
+  object-fit: cover;
 }
 
 .profile-image:hover {
   transform: scale(1.05);
 }
+
 
 @media (max-width: 768px) {
   .about-content {
@@ -62,4 +79,29 @@
     width: 200px;
     height: 200px;
   }
+}
+
+.about-image-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.social-icon {
+  color: #1B4D3E;
+  font-size: 2rem;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: translateY(-3px);
+  color: #2C6E5B;
 }

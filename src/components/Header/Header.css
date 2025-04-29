@@ -56,6 +56,7 @@
   color: #f5f5eb;
   font-weight: 500;
   transition: all 0.3s ease;
+  font-size: 1.1rem; /* Aumenta el tamaño de la fuente */
 }
 
 .header-nav a:hover {
