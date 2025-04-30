@@ -59,7 +59,9 @@
 }
 
 .skill-card {
-  background-color: rgba(245, 245, 235, 0.1);
+  position: relative;
+  overflow: hidden;
+  background: transparent;
   padding: 1.2rem;
   border-radius: 12px;
   display: flex;
@@ -69,42 +71,57 @@
   transition: all 0.3s ease;
   cursor: pointer;
   width: 100px;
-  backdrop-filter: blur(5px);
 }
 
 .skill-card:hover {
-  transform: translateY(-5px);
-  background-color: rgba(245, 245, 235, 0.15);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(27, 77, 62, 0.1);
 }
 
 .skill-icon {
   font-size: 2.2rem;
   transition: all 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
 .skill-card:hover .skill-icon {
-  transform: scale(1.2) rotate(5deg);
-}
-
-.skill-name {
-  color: #1B4D3E;
-  font-size: 0.9rem;
-  font-weight: 500;
-  text-align: center;
+  transform: rotate(15deg); 
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
 }
 
 
-.js-icon { color: #F7DF1E; }
-.react-icon { color: #61DAFB; }
-.html-icon { color: #E34F26; }
-.css-icon { color: #1572B6; }
-.sql-icon { color: #4479A1; }
-.git-icon { color: #F05032; }
-.github-icon { color: #181717; }
-.python-icon { color: #3776AB; }
-.vue-icon { color: #4FC08D; }
-.ts-icon { color: #3178C6; }
+.js-icon { 
+  color: #F7DF1E;
+  filter: drop-shadow(0 2px 4px rgba(247, 223, 30, 0.2));
+}
+.react-icon { 
+  color: #61DAFB;
+  filter: drop-shadow(0 2px 4px rgba(97, 218, 251, 0.2));
+}
+.html-icon { 
+  color: #E34F26;
+  filter: drop-shadow(0 2px 4px rgba(227, 79, 38, 0.2));
+}
+.css-icon { 
+  color: #1572B6;
+  filter: drop-shadow(0 2px 4px rgba(21, 114, 182, 0.2));
+}
+.sql-icon { 
+  color: #4479A1;
+  filter: drop-shadow(0 2px 4px rgba(68, 121, 161, 0.2));
+}
+.git-icon { 
+  color: #F05032;
+  filter: drop-shadow(0 2px 4px rgba(240, 80, 50, 0.2));
+}
+.github-icon { 
+  color: #181717;
+  filter: drop-shadow(0 2px 4px rgba(24, 23, 23, 0.2));
+}
+.python-icon { 
+  color: #3776AB;
+  filter: drop-shadow(0 2px 4px rgba(55, 118, 171, 0.2));
+}
 
 @media (max-width: 768px) {
   .main-skills-grid {
@@ -113,5 +130,16 @@
 
   .skill-icon {
     font-size: 2rem;
+  }
+}
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
