@@ -1,5 +1,5 @@
 import './Experience.css';
-import cvFile from '../../assets/downloads/cv.pdf';
+import cvFile from '../../assets/downloads/DaniloPalermoCV.pdf';
 import { FaDownload } from 'react-icons/fa';
 
 const Experience = () => {

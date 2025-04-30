@@ -28,9 +28,9 @@
   content: '';
   position: absolute;
   bottom: 10px;
-  left: 15%;
+  left: 13%;
   transform: translateX(-50%);
-  width: 10%;
+  width: 12%;
   height: 3px;
   background-color: #1B4D3E;
   border-radius: 2px;
