@@ -10,22 +10,27 @@ const Experience = () => {
         <div className="experience-container">
           <div className="experience-summary">
             <div className="experience-item">
-              <h3>Desarrollador Web - Proyecto Final</h3>
-              <p className="experience-period">2023</p>
+              <h3>Le utthe</h3>
+              <p className="experience-period">Mayo 2023 - Actualidad</p>
+              <p className="experience-location">Rosario, Santa Fe</p>
               <ul>
-                <li>Desarrollo de una aplicación web full-stack utilizando React y Node.js</li>
-                <li>Implementación de base de datos SQL y gestión de usuarios</li>
-                <li>Diseño responsive y experiencia de usuario intuitiva</li>
+                <li>Atención personalizada al cliente, resolviendo consultas y gestionando reclamos con eficacia</li>
+                <li>Control y cierre de caja, manejo de efectivo y medios de pago</li>
+                <li>Reposición y control de stock, garantizando la correcta exhibición de productos</li>
+                <li>Registro de movimientos, seguimiento de inventario y carga de datos</li>
               </ul>
             </div>
             
             <div className="experience-item">
-              <h3>Soporte Técnico IT</h3>
-              <p className="experience-period">2022 - 2023</p>
+              <h3>Uno Fitness Center</h3>
+              <p className="experience-period">Marzo 2022 - Mayo 2023</p>
+              <p className="experience-location">Rosario, Santa Fe</p>
               <ul>
-                <li>Mantenimiento y reparación de equipos informáticos</li>
-                <li>Resolución de problemas de hardware y software</li>
-                <li>Atención al cliente y documentación técnica</li>
+                <li>Manejo y control de caja, incluyendo apertura, cierre y conciliación diaria</li>
+                <li>Atención al cliente presencial y virtual, brindando soluciones ágiles y efectivas</li>
+                <li>Elaboración y control de planillas en Microsoft Excel para seguimiento de ingresos y asistencia</li>
+                <li>Gestión de redes sociales institucionales, incluyendo publicaciones y atención de consultas</li>
+                <li>Profesor a cargo de clases grupales e individuales en disciplinas fitness</li>
               </ul>
             </div>
           </div>

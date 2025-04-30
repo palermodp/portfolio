@@ -1,35 +1,12 @@
 import './Skills.css';
 import { 
-  SiJavascript, SiReact, SiHtml5, SiCss3,
-  SiMysql, SiGit, SiGithub, SiPython,
-  SiVuedotjs, SiTypescript
-} from 'react-icons/si';
-import { FaTools, FaFileWord, FaHeadset } from 'react-icons/fa';
+  FaJs, FaReact, FaHtml5, FaCss3Alt, FaGit, FaGithub, 
+  FaPython, FaVuejs, 
+  FaTools, FaMicrosoft, FaHeadset 
+} from 'react-icons/fa';
+import { SiTypescript, SiMysql } from 'react-icons/si';
 
 const Skills = () => {
-  const mainSkills = [
-    { name: 'JavaScript', icon: <SiJavascript className="js-icon" /> },
-    { name: 'React', icon: <SiReact className="react-icon" /> },
-    { name: 'HTML', icon: <SiHtml5 className="html-icon" /> },
-    { name: 'CSS', icon: <SiCss3 className="css-icon" /> },
-    { name: 'SQL', icon: <SiMysql className="sql-icon" /> },
-    { name: 'Git', icon: <SiGit className="git-icon" /> },
-    { name: 'GitHub', icon: <SiGithub className="github-icon" /> }
-  ];
-
-  const additionalSkills = {
-    otherTech: [
-      { name: 'Python 3', icon: <SiPython className="python-icon" /> },
-      { name: 'Vue 3', icon: <SiVuedotjs className="vue-icon" /> },
-      { name: 'TypeScript', icon: <SiTypescript className="ts-icon" /> }
-    ],
-    extras: [
-      { name: 'Hardware', icon: <FaTools className="hardware-icon" /> },
-      { name: 'Office', icon: <FaFileWord className="office-icon" /> },
-      { name: 'Soporte', icon: <FaHeadset className="support-icon" /> }
-    ]
-  };
-
   return (
     <section id="skills" className="skills">
       <div className="skills-content">
@@ -38,37 +15,65 @@ const Skills = () => {
         <div className="main-skills">
           <h3>Tecnologías Principales</h3>
           <div className="main-skills-grid">
-            {mainSkills.map((skill, index) => (
-              <div key={index} className="skill-card">
-                <div className="skill-icon">{skill.icon}</div>
-                <span className="skill-name">{skill.name}</span>
-              </div>
-            ))}
+            <div className="skill-card">
+              <FaJs className="skill-icon js-icon" />
+              <span className="skill-name">JavaScript</span>
+            </div>
+            <div className="skill-card">
+              <FaReact className="skill-icon react-icon" />
+              <span className="skill-name">React</span>
+            </div>
+            <div className="skill-card">
+              <FaHtml5 className="skill-icon html-icon" />
+              <span className="skill-name">HTML5</span>
+            </div>
+            <div className="skill-card">
+              <FaCss3Alt className="skill-icon css-icon" />
+              <span className="skill-name">CSS3</span>
+            </div>
+            <div className="skill-card">
+              <SiMysql className="skill-icon sql-icon" />
+              <span className="skill-name">MySQL</span>
+            </div>
+            <div className="skill-card">
+              <FaGit className="skill-icon git-icon" />
+              <span className="skill-name">Git</span>
+            </div>
+            <div className="skill-card">
+              <FaGithub className="skill-icon github-icon" />
+              <span className="skill-name">GitHub</span>
+            </div>
+            <div className="skill-card">
+              <FaPython className="skill-icon python-icon" />
+              <span className="skill-name">Python</span>
+            </div>
+            <div className="skill-card">
+              <FaVuejs className="skill-icon vue-icon" />
+              <span className="skill-name">Vue.js</span>
+            </div>
+            <div className="skill-card">
+              <SiTypescript className="skill-icon ts-icon" />
+              <span className="skill-name">TypeScript</span>
+            </div>
           </div>
         </div>
 
         <div className="additional-skills">
           <div className="additional-skills-category">
-            <h3>Otras Tecnologías</h3>
-            <div className="additional-skills-grid">
-              {additionalSkills.otherTech.map((skill, index) => (
-                <div key={index} className="skill-card">
-                  <div className="skill-icon">{skill.icon}</div>
-                  <span className="skill-name">{skill.name}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="additional-skills-category">
             <h3>Habilidades Adicionales</h3>
             <div className="additional-skills-grid">
-              {additionalSkills.extras.map((skill, index) => (
-                <div key={index} className="skill-card">
-                  <div className="skill-icon">{skill.icon}</div>
-                  <span className="skill-name">{skill.name}</span>
-                </div>
-              ))}
+              <div className="skill-card">
+                <FaTools className="skill-icon hardware-icon" />
+                <span className="skill-name">Hardware</span>
+              </div>
+              <div className="skill-card">
+                <FaMicrosoft className="skill-icon office-icon" />
+                <span className="skill-name">Office</span>
+              </div>
+              <div className="skill-card">
+                <FaHeadset className="skill-icon support-icon" />
+                <span className="skill-name">Soporte Técnico</span>
+              </div>
             </div>
           </div>
         </div>
