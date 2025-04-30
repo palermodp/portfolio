@@ -1,5 +1,4 @@
 import './Experience.css';
-import cvFile from '../../assets/downloads/DaniloPalermoCV.pdf';
 import { FaDownload } from 'react-icons/fa';
 
 const Experience = () => {
@@ -7,8 +6,11 @@ const Experience = () => {
     <section id="experience" className="experience">
       <div className="experience-content">
         <h2>Experiencia</h2>
+        
         <div className="experience-container">
-          <div className="experience-summary">
+          <h3 className="experience-section-title">Últimas Experiencias Laborales</h3>
+          
+          <div className="experience-info">
             <div className="experience-item">
               <h3>Le utthe</h3>
               <p className="experience-period">Mayo 2023 - Actualidad</p>
@@ -36,8 +38,8 @@ const Experience = () => {
           </div>
           
           <div className="cv-download">
-            <p>¿Quieres ver mi experiencia completa?</p>
-            <a href={cvFile} download className="download-button">
+            <h4 className="cv-title">¿Quieres saber más sobre mi experiencia?</h4>
+            <a href="/cv.pdf" className="download-cv" download>
               <FaDownload className="download-icon" />
               Descargar CV
             </a>
