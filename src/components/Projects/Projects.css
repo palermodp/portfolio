@@ -46,7 +46,7 @@
 
 .project-image {
   width: 100%;
-  height: 250px; /* Aumentamos un poco la altura */
+  height: 250px; 
   overflow: hidden;
   position: relative;
   border-radius: 10px 10px 0 0;
@@ -56,7 +56,7 @@
 .project-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Cambiamos a cover para que ocupe todo el espacio */
+  object-fit: cover;
   transition: transform 0.3s ease;
 }
 
@@ -137,4 +137,30 @@
   .projects-grid {
     grid-template-columns: 1fr;
   }
+}
+
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.project-card:hover::before {
+  left: 100%;
 }

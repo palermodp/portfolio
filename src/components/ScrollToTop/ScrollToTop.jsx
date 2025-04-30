@@ -6,11 +6,9 @@ const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => {
-    // Obtener la posición del componente About
     const aboutSection = document.getElementById('about');
     const aboutPosition = aboutSection?.offsetTop || 0;
     
-    // Mostrar el botón cuando pasamos la sección About
     if (window.scrollY > aboutPosition) {
       setIsVisible(true);
     } else {

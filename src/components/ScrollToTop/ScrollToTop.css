@@ -1,13 +1,13 @@
 .scroll-to-top {
   position: fixed;
   bottom: 2rem;
-  right: 2rem; /* Cambiamos left por right y eliminamos transform en X */
-  background-color: #f5f5eb; /* Color claro para mejor contraste */
-  color: #1B4D3E; /* Color del ícono invertido */
+  right: 2rem; 
+  background-color: #f5f5eb; 
+  color: #1B4D3E;
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  border: 2px solid #1B4D3E; /* Agregamos borde para mejor visibilidad */
+  border: 2px solid #1B4D3E;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -20,9 +20,46 @@
   z-index: 1000;
 }
 
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(245, 245, 235, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(245, 245, 235, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(245, 245, 235, 0);
+  }
+}
+
 .scroll-to-top.visible {
   opacity: 1;
   visibility: visible;
+  animation: pulse 2s infinite;
+}
+
+.scroll-to-top:hover {
+  background-color: #1B4D3E;
+  color: #f5f5eb;
+  transform: translateY(-3px);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(245, 245, 235, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(245, 245, 235, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(245, 245, 235, 0);
+  }
+}
+
+.scroll-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  animation: pulse 2s infinite;
 }
 
 .scroll-to-top:hover {
