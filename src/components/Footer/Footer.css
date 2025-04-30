@@ -1,0 +1,50 @@
+.footer {
+  background-color: #1B4D3E;
+  padding: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-text {
+  color: #f5f5eb;
+  font-size: 1rem;
+}
+
+.footer-text p {
+  margin: 0.5rem 0;
+}
+
+.heart-icon {
+  color: #ff6b6b;
+  margin: 0 0.5rem;
+  animation: heartbeat 1.5s ease infinite;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  color: #e8e8d8;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 1.5rem;
+  }
+}
