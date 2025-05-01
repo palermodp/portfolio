@@ -12,7 +12,7 @@ const Experience = () => {
           
           <div className="experience-info">
             <div className="experience-item">
-              <h3>Le utthe</h3>
+              <h3>Encargado de Depósito y Administrativo - Le utthe</h3>
               <p className="experience-period">Mayo 2023 - Actualidad</p>
               <p className="experience-location">Rosario, Santa Fe</p>
               <ul>
@@ -24,7 +24,7 @@ const Experience = () => {
             </div>
             
             <div className="experience-item">
-              <h3>Uno Fitness Center</h3>
+              <h3>Administrativo - Uno Fitness Center</h3>
               <p className="experience-period">Marzo 2022 - Mayo 2023</p>
               <p className="experience-location">Rosario, Santa Fe</p>
               <ul>
