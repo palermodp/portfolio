@@ -15,7 +15,9 @@ const Projects = () => {
             </div>
             <div className="project-info">
               <h3>Bijou Boutique</h3>
-              <p>E-commerce de joyería desarrollado con JavaScript, HTML y CSS. Implementa carrito de compras, gestión de productos en base de datos y diseño responsive para una experiencia de compra óptima. Backend construido con Express.</p>
+              <p>E-commerce de joyería desarrollado con JavaScript, HTML y CSS. Implementa carrito de compras, gestión de productos en base de datos y diseño responsive para una experiencia de compra óptima. Backend construido con Express.
+                Mi primer proyecto escalable con el cual rendi y aprobe el curso de Full Stack Developer en Digital House.
+              </p>
               <div className="project-tech">
                 <span>JavaScript</span>
                 <span>HTML</span>
@@ -36,7 +38,7 @@ const Projects = () => {
             </div>
             <div className="project-info">
               <h3>Full Stack Book</h3>
-              <p>Plataforma educativa diseñada para principiantes en el mundo de la informática. Ofrece recursos de aprendizaje, guías paso a paso y contenido adaptado tanto para personas sin experiencia como para aquellos que buscan fortalecer sus conocimientos. Desarrollada con React, Node.js y Express, incluye sistema de autenticación y base de datos relacional.</p>
+              <p>Plataforma educativa diseñada para principiantes en el mundo de la informática. Ofrece recursos de aprendizaje, guías paso a paso y contenido adaptado tanto para personas sin experiencia como para aquellos que buscan fortalecer sus conocimientos. Desarrollada con React, Node.js y Express.</p>
               <div className="project-tech">
                 <span>React</span>
                 <span>Node.js</span>
