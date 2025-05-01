@@ -1,17 +1,17 @@
 .skills {
   padding: 4rem 2rem;
-  background-color: #1B4D3E;
+  background-color: #f5f5eb;
   width: 100%;
 }
 
 .skills-content {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  text-align: center;
 }
 
 .skills h2 {
-  color: #f5f5eb;
+  color: #1B4D3E;
   font-size: 2.5rem;
   margin-bottom: 3rem;
   text-align: center;
@@ -27,109 +27,104 @@
   transform: translateX(-50%);
   width: 10%;
   height: 3px;
-  background-color: #f5f5eb;
+  background-color: #1B4D3E;
   border-radius: 2px;
-}
-
-.skills-container {
-  display: flex;
-  justify-content: center;
-}
-
-.skills-category {
-  flex: 1;
-  background-color: #f8f8f0;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(27, 77, 62, 0.1);
 }
 
 .skills-category h3 {
   color: #1B4D3E;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   margin-bottom: 2rem;
-  text-align: center;
 }
 
 .main-skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
-  justify-content: center;
+  padding: 1rem;
 }
 
 .skill-card {
-  position: relative;
-  overflow: hidden;
-  background: transparent;
-  padding: 1.2rem;
+  background: linear-gradient(145deg, #ffffff, #f5f5f5);
+  border: 1px solid rgba(27, 77, 62, 0.1);
   border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.6rem;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  width: 100px;
+  gap: 1rem;
+  box-shadow: 0 2px 8px rgba(27, 77, 62, 0.1);
+  animation: fadeIn 0.6s ease-out;
 }
 
 .skill-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 15px rgba(27, 77, 62, 0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(27, 77, 62, 0.15);
 }
 
 .skill-icon {
-  font-size: 2.2rem;
-  transition: all 0.3s ease;
+  font-size: 2.5rem;
+  color: #1B4D3E;
+  transition: transform 0.3s ease;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
-.skill-card:hover .skill-icon {
-  transform: rotate(15deg); 
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+.skill-name {
+  font-size: 1rem;
+  color: #1B4D3E;
+  font-weight: 500;
+  background: rgba(27, 77, 62, 0.05);
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  transition: all 0.3s ease;
 }
 
+.skill-card:hover .skill-name {
+  background: rgba(27, 77, 62, 0.1);
+  transform: scale(1.05);
+}
 
-.js-icon { 
-  color: #F7DF1E;
-  filter: drop-shadow(0 2px 4px rgba(247, 223, 30, 0.2));
-}
-.react-icon { 
-  color: #61DAFB;
-  filter: drop-shadow(0 2px 4px rgba(97, 218, 251, 0.2));
-}
-.html-icon { 
-  color: #E34F26;
-  filter: drop-shadow(0 2px 4px rgba(227, 79, 38, 0.2));
-}
-.css-icon { 
-  color: #1572B6;
-  filter: drop-shadow(0 2px 4px rgba(21, 114, 182, 0.2));
-}
-.sql-icon { 
-  color: #4479A1;
-  filter: drop-shadow(0 2px 4px rgba(68, 121, 161, 0.2));
-}
-.git-icon { 
-  color: #F05032;
-  filter: drop-shadow(0 2px 4px rgba(240, 80, 50, 0.2));
-}
-.github-icon { 
-  color: #181717;
-  filter: drop-shadow(0 2px 4px rgba(24, 23, 23, 0.2));
-}
-.python-icon { 
-  color: #3776AB;
-  filter: drop-shadow(0 2px 4px rgba(55, 118, 171, 0.2));
-}
+/* Iconos específicos */
+.js-icon { color: #f7df1e; }
+.react-icon { color: #61dafb; }
+.html-icon { color: #e34f26; }
+.css-icon { color: #264de4; }
+.sql-icon { color: #00618a; }
+.git-icon { color: #f05032; }
+.github-icon { color: #171515; }
+.python-icon { color: #3776ab; }
 
 @media (max-width: 768px) {
+  .skills {
+    padding: 2rem 1rem;
+  }
+
+  .skills h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .skills-category h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
   .main-skills-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .skill-card {
+    padding: 1rem;
   }
 
   .skill-icon {
     font-size: 2rem;
+  }
+
+  .skill-name {
+    font-size: 0.9rem;
   }
 }
 @keyframes float {
@@ -143,3 +138,24 @@
     transform: translateY(0px);
   }
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Efecto de entrada escalonado */
+.skill-card:nth-child(1) { animation-delay: 0.1s; }
+.skill-card:nth-child(2) { animation-delay: 0.2s; }
+.skill-card:nth-child(3) { animation-delay: 0.3s; }
+.skill-card:nth-child(4) { animation-delay: 0.4s; }
+.skill-card:nth-child(5) { animation-delay: 0.5s; }
+.skill-card:nth-child(6) { animation-delay: 0.6s; }
+.skill-card:nth-child(7) { animation-delay: 0.7s; }
+.skill-card:nth-child(8) { animation-delay: 0.8s; }
