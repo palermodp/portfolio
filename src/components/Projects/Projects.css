@@ -37,57 +37,68 @@
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease; 
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 550px;
 }
 
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(27, 77, 62, 0.15); 
+}
 
 .project-image {
   width: 100%;
-  height: 250px; 
+  height: 220px; 
   overflow: hidden;
   position: relative;
-  border-radius: 10px 10px 0 0;
-  background-color: #f8f8f0;
+  background-color: #1B4D3E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .project-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transition: transform 1s ease;
+  object-fit: contain; 
+  transition: transform 0.5s ease;
+  opacity: 0.85;
+  filter: brightness(0.9);
+  padding: 1rem; 
+  background: rgb(255, 255, 255); 
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  .project-image {
+    height: 200px;
+  }
+
+  .project-image img {
+    padding: 0.5rem;
+  }
 }
 
 .project-info {
   padding: 1.5rem;
   background-color: #ffffff;
-}
-
-.project-info h3 {
-  color: #1B4D3E;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-}
-
-.project-info p {
-  color: #333;
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
-  font-size: 1rem;
-}
-
-.project-card:hover .project-image img {
-  transform: scale(1.05);
-}
-
-.project-info {
-  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  position: relative;
 }
 
 .project-info h3 {
   color: #1B4D3E;
   font-size: 1.3rem;
   margin-bottom: 1rem;
+  font-weight: 600;
 }
 
 .project-info p {
@@ -99,21 +110,37 @@
 .project-tech {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.8rem;
+  margin-top: auto;
+  padding-top: 1rem;
   margin-bottom: 1rem;
 }
 
 .project-tech span {
-  background-color: rgba(27, 77, 62, 0.1);
+  background: linear-gradient(135deg, rgba(27, 77, 62, 0.1) 0%, rgba(44, 110, 91, 0.2) 100%);
   color: #1B4D3E;
-  padding: 0.3rem 0.8rem;
-  border-radius: 15px;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
   font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(27, 77, 62, 0.1);
+  box-shadow: 0 2px 4px rgba(27, 77, 62, 0.05);
+}
+
+.project-tech span:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, rgba(27, 77, 62, 0.15) 0%, rgba(44, 110, 91, 0.25) 100%);
+  box-shadow: 0 4px 8px rgba(27, 77, 62, 0.1);
+  border-color: rgba(27, 77, 62, 0.2);
 }
 
 .project-links {
   display: flex;
   gap: 1rem;
+  margin-top: 1rem; 
+  padding-top: 0.5rem; 
+  border-top: 1px solid rgba(27, 77, 62, 0.1);
 }
 
 .project-links a {
@@ -135,24 +162,16 @@
   .projects-grid {
     grid-template-columns: 1fr;
   }
-}
+  
+  .project-card {
+    min-height: 500px;
+  }
 
-.project-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(255, 255, 255, 0.3),
-    transparent
-  );
-  transition: 0.5s;
-}
+  .project-image {
+    height: 180px;
+  }
 
-.project-card:hover::before {
-  left: 100%;
+  .project-image img {
+    object-fit: cover;
+  }
 }
