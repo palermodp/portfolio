@@ -9,6 +9,9 @@ const About = () => {
       <div className="about-content">
         <div className="about-text">
           <h2>Sobre Mí</h2>
+          <p className="tagline">
+            Desarrollador Web Front-end | Entusiasta de React
+          </p>
           <p>
             ¡Hola! Soy Danilo Palermo, un recién graduado apasionado por el desarrollo web, especialmente en el front-end. 
             Me encanta crear experiencias web interactivas y atractivas utilizando tecnologías como JavaScript, HTML, CSS y ReactJS. 
@@ -22,6 +25,14 @@ const About = () => {
             Además de mis habilidades en desarrollo web, tengo un sólido conocimiento en hardware, incluyendo el armado y reparación de PC's, 
             lo que me permite tener una comprensión integral de los sistemas informáticos.
           </p>
+          <div className="professional-goals">
+            <h3>Objetivos Profesionales</h3>
+            <p>
+              Busco mi primera oportunidad en el mundo IT para desarrollarme como programador front-end,
+              aprender de equipos experimentados y crecer profesionalmente mientras aporto
+              mi entusiasmo y dedicación por la programación.
+            </p>
+          </div>
         </div>
         <div className="about-image-container">
           <img 
