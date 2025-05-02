@@ -50,17 +50,17 @@
 }
 
 .profile-image {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
+  width: 280px;
+  height: 350px;
+  border-radius: 15px;
   object-fit: cover;
-  border: 4px solid #1B4D3E;
-  box-shadow: 0 8px 16px rgba(27, 77, 62, 0.15);
+  border: 2px solid #1B4D3E;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
 .profile-image:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 .social-links {
@@ -71,7 +71,7 @@
 }
 
 .social-icon {
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   color: #1B4D3E;
   transition: all 0.3s ease;
 }
@@ -106,8 +106,8 @@
   }
 
   .profile-image {
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 280px;
   }
 
   .social-links {
