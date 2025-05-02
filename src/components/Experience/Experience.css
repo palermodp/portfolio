@@ -167,7 +167,7 @@
   font-size: 1.2rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .experience {
     padding: 2rem 1rem;
   }
@@ -185,10 +185,12 @@
   .experience-info {
     flex-direction: column;
     gap: 1.5rem;
+    align-items: center;
   }
 
   .experience-item {
     width: 100%;
+    max-width: 500px;
     margin-bottom: 0;
     padding: 1.5rem;
   }
@@ -200,6 +202,8 @@
   .cv-download {
     margin-top: 2rem;
     padding: 1.5rem;
+    width: 100%;
+    max-width: 500px;
   }
 
   .download-cv {

@@ -175,3 +175,52 @@
     object-fit: cover;
   }
 }
+
+@media (max-width: 1024px) {
+  .projects {
+    padding: 3rem 1rem;
+  }
+
+  .projects h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+    gap: 2rem;
+  }
+  
+  .project-card {
+    min-height: 500px;
+    width: 100%;
+  }
+
+  .project-image {
+    height: 200px;
+  }
+
+  .project-image img {
+    object-fit: cover;
+    padding: 0.5rem;
+  }
+
+  .project-info {
+    padding: 1.2rem;
+  }
+
+  .project-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .project-tech {
+    gap: 0.6rem;
+  }
+
+  .project-tech span {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.8rem;
+  }
+}
