@@ -1,0 +1,75 @@
+.tech-carousel {
+  width: 80%;
+  margin: 2rem auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.tech-carousel::before,
+.tech-carousel::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 2;
+}
+
+.tech-carousel::before {
+  left: 0;
+  background: linear-gradient(to right, #ffffff, transparent);
+}
+
+.tech-carousel::after {
+  right: 0;
+  background: linear-gradient(to left, #ffffff, transparent);
+}
+
+.carousel-track {
+  display: flex;
+  animation: scroll 30s linear infinite;
+  gap: 4rem;
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.tech-item svg {
+  width: 3rem;
+  height: 3rem;
+  transition: transform 0.3s ease;
+}
+
+.tech-item:hover svg {
+  transform: scale(1.2);
+}
+
+.tech-item span {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .tech-carousel {
+    width: 90%;
+  }
+
+  .tech-item svg {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}

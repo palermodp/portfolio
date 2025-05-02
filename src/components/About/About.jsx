@@ -1,6 +1,7 @@
 import './About.css';
 import profileImage from '../../assets/images/me.jpeg';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import TechCarousel from '../TechCarousel/TechCarousel';
 
 const About = () => {
   return (
@@ -57,6 +58,7 @@ const About = () => {
           </div>
         </div>
       </div>
+      <TechCarousel />
     </section>
   );
 };
