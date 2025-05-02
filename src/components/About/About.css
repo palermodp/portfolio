@@ -89,9 +89,15 @@
   }
 
   .about h2 {
-    font-size: 2rem;
-    margin: 2rem auto 1.5rem;  /* Ajustado para mobile */
+    font-size: 2.5rem; 
+    margin: 2rem auto 1.5rem;
     text-align: center;
+  }
+
+  .about h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
   }
 
   .about-content {
@@ -115,28 +121,17 @@
   }
 
   .profile-image {
-    width: 220px;
-    height: 280px;
+    width: 280px;
+    height: 350px;
     margin-top: 1rem;
   }
 
   .social-links {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
   }
 
   .social-icon {
-    font-size: 1.5rem;
+    font-size: 2.8rem;
   }
 
-  .about h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    text-align: center;
-  }
-
-  .about h2::after {
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-  }
 }
