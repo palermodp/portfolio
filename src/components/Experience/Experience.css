@@ -185,28 +185,56 @@
   .experience-info {
     flex-direction: column;
     gap: 1.5rem;
-    align-items: center;
+    width: 80%;
+    margin: 0 auto;
   }
 
   .experience-item {
     width: 100%;
-    max-width: 500px;
-    margin-bottom: 0;
-    padding: 1.5rem;
+    padding: 1.8rem;
   }
 
   .experience-item h3 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    line-height: 1.4;
+  }
+
+  .experience-period {
+    font-size: 1.1rem;
+  }
+
+  .experience-location {
+    font-size: 1.1rem;
+  }
+
+  .experience-item ul {
+    margin-top: 1rem;
+  }
+
+  .experience-item li {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
   }
 
   .cv-download {
-    margin-top: 2rem;
-    padding: 1.5rem;
-    width: 100%;
-    max-width: 500px;
+    margin-top: 2.5rem;
+    padding: 2rem;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cv-title {
+    font-size: 1.3rem;
   }
 
   .download-cv {
-    padding: 0.8rem 1.5rem;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+
+  .download-icon {
+    font-size: 1.3rem;
   }
 }

@@ -83,7 +83,7 @@
 
 @media (max-width: 1024px) {
   .about {
-    padding: 6rem 1.5rem 2rem;
+    padding: 8rem 1.5rem 2rem;
   }
 
   .about-content {
@@ -94,14 +94,9 @@
     width: 100%;
   }
 
-  .about-text {
-    flex: none;
-    width: 100%;
-    text-align: center;
-  }
-
   .about-image-container {
     width: 100%;
+    margin-top: 2rem;
     margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
@@ -111,6 +106,7 @@
   .profile-image {
     width: 220px;
     height: 280px;
+    margin-top: 1rem;
   }
 
   .social-links {

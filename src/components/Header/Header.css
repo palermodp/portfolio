@@ -90,26 +90,28 @@
   padding: 0.5rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .header {
-    padding: 1rem;
+    padding: 1.2rem 1.5rem;
   }
 
   .header.scrolled {
-    padding: 0.8rem 1rem;
+    padding: 1rem 1.5rem;
   }
 
   .header-text h1 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 
   .header-subtitle {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
+    margin-top: 0.3rem;
   }
 
   .menu-toggle {
     display: block;
     z-index: 1001;
+    font-size: 1.8rem;
   }
 
   .header-nav {
@@ -135,10 +137,10 @@
   }
 
   .header-nav a {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
+}
 
-  #about {
-    padding-top: 6rem; 
-  }
+#about {
+  padding-top: 6rem; 
 }
