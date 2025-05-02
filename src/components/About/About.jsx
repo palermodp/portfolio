@@ -1,14 +1,36 @@
 import './About.css';
-// Importa tu imagen (ajusta la ruta según el nombre de tu archivo)
 import profileImage from '../../assets/images/me.jpeg';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const About = () => {
   return (
     <section id="about" className="about">
+      <h2>Sobre Mí</h2>
       <div className="about-content">
+        <div className="about-image-container">
+          <img 
+            src={profileImage} 
+            alt="Danilo Palermo - Desarrollador Web" 
+            className="profile-image"
+          />
+          <div className="social-links">
+            <a 
+              href="https://github.com/palermodp" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <FaGithub className="social-icon" />
+            </a>
+            <a 
+              href="https://www.linkedin.com/in/palermodanilo/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin className="social-icon" />
+            </a>
+          </div>
+        </div>
         <div className="about-text">
-          <h2>Sobre Mí</h2>
           <p className="tagline">
             Desarrollador Web Front-end | Entusiasta de React
           </p>
@@ -32,29 +54,6 @@ const About = () => {
               aprender de equipos experimentados y crecer profesionalmente mientras aporto
               mi entusiasmo y dedicación por la programación.
             </p>
-          </div>
-        </div>
-        <div className="about-image-container">
-          <img 
-            src={profileImage} 
-            alt="Danilo Palermo - Desarrollador Web" 
-            className="profile-image"
-          />
-          <div className="social-links">
-            <a 
-              href="https://github.com/palermodp" 
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
-              <FaGithub className="social-icon" />
-            </a>
-            <a 
-              href="https://www.linkedin.com/in/palermodanilo/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
-              <FaLinkedin className="social-icon" />
-            </a>
           </div>
         </div>
       </div>

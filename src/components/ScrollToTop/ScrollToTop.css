@@ -67,3 +67,27 @@
   color: #f5f5eb;
   transform: translateY(-3px);
 }
+
+
+@media (max-width: 1024px) {
+  .scroll-to-top {
+    width: 60px;
+    height: 60px;
+    font-size: 1.8rem;
+    bottom: 2.5rem;
+    right: 2.5rem;
+    border-width: 3px;
+  }
+
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(245, 245, 235, 0.7);
+    }
+    70% {
+      box-shadow: 0 0 0 15px rgba(245, 245, 235, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(245, 245, 235, 0);
+    }
+  }
+}
