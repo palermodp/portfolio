@@ -1,7 +1,9 @@
 .experience {
   padding: 4rem 2rem;
-  background-color: #ffffff;
+  background-color: #f7f7f2; 
   width: 100%;
+  position: relative;
+  border-top: 2px solid rgba(27, 77, 62, 0.15);
 }
 
 .experience-content {

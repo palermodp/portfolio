@@ -76,8 +76,14 @@
   transition: width 0.3s ease;
 }
 
-.header-nav a:hover::after {
+.header-nav a:hover::after,
+.header-nav a.active::after {
   width: 100%;
+}
+
+.header-nav a.active {
+  font-weight: 600;
+  opacity: 1;
 }
 
 .menu-toggle {

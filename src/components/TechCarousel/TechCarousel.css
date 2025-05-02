@@ -65,11 +65,45 @@
 
 @media (max-width: 768px) {
   .tech-carousel {
-    width: 90%;
+    width: 95%; 
+    margin: 1rem auto;
+  }
+
+  .carousel-track {
+    gap: 2rem; 
+    animation: scroll 20s linear infinite; 
+  }
+
+  .tech-item {
+    padding: 0.5rem;
   }
 
   .tech-item svg {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .tech-item span {
+    font-size: 0.8rem;
+  }
+
+  .tech-carousel::before,
+  .tech-carousel::after {
+    width: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tech-carousel {
+    width: 100%;
+  }
+
+  .carousel-track {
+    gap: 1.5rem;
+  }
+
+  .tech-item svg {
+    width: 1.8rem;
+    height: 1.8rem;
   }
 }
