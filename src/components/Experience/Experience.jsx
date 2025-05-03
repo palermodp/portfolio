@@ -1,6 +1,5 @@
 import './Experience.css';
 import { FaDownload } from 'react-icons/fa';
-import {cvFile} from './assets/downloads/DaniloPalermoCV.pdf';
 
 const Experience = () => {
   return (
@@ -40,7 +39,13 @@ const Experience = () => {
           
           <div className="cv-download">
             <h4 className="cv-title">¿Quieres saber más sobre mi experiencia?</h4>
-            <a href={cvFile} className="download-cv" download="DaniloPalermoCV.pdf">
+            <a 
+              href="/DaniloPalermoCV.pdf" 
+              className="download-cv" 
+              download="DaniloPalermoCV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaDownload className="download-icon" />
               Descargar CV
             </a>
