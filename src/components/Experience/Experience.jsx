@@ -39,7 +39,7 @@ const Experience = () => {
           
           <div className="cv-download">
             <h4 className="cv-title">¿Quieres saber más sobre mi experiencia?</h4>
-            <a href="/cv.pdf" className="download-cv" download>
+            <a href="/src/assets/downloads/DaniloPalermoCV.pdf" className="download-cv" download="DaniloPalermoCV.pdf">
               <FaDownload className="download-icon" />
               Descargar CV
             </a>
