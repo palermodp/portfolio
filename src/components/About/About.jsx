@@ -1,14 +1,20 @@
 import './About.css';
-import profileImage from '../../assets/images/me.jpeg';
+import profileImage from '../../assets/images/me.jpg';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import TechCarousel from '../TechCarousel/TechCarousel';
+import { motion } from 'framer-motion';
 
 const About = () => {
   return (
     <section id="about" className="about">
       <h2>Sobre Mí</h2>
       <div className="about-content">
-        <div className="about-image-container">
+        <motion.div 
+          className="about-image-container"
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+        >
           <img 
             src={profileImage} 
             alt="Danilo Palermo - Desarrollador Web" 
@@ -30,8 +36,14 @@ const About = () => {
               <FaLinkedin className="social-icon" />
             </a>
           </div>
-        </div>
-        <div className="about-text">
+        </motion.div>
+        
+        <motion.div 
+          className="about-text"
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+        >
           <p className="tagline">
             Desarrollador Web Front-end | Entusiasta de React
           </p>
@@ -56,7 +68,7 @@ const About = () => {
               mi entusiasmo y dedicación por la programación.
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
       <TechCarousel />
     </section>

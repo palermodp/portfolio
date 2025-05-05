@@ -1,17 +1,37 @@
 import './Experience.css';
 import { FaDownload } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 const Experience = () => {
   return (
     <section id="experience" className="experience">
       <div className="experience-content">
-        <h2>Experiencia</h2>
+        <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          Experiencia
+        </motion.h2>
         
         <div className="experience-container">
-          <h3 className="experience-section-title">Últimas Experiencias Laborales</h3>
+          <motion.h3 
+            className="experience-section-title"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            Últimas Experiencias Laborales
+          </motion.h3>
           
           <div className="experience-info">
-            <div className="experience-item">
+            <motion.div 
+              className="experience-item"
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.3 }}
+            >
               <h3>Encargado de Depósito y Administrativo - Le utthe</h3>
               <p className="experience-period">Mayo 2023 - Actualidad</p>
               <p className="experience-location">Rosario, Santa Fe</p>
@@ -21,9 +41,15 @@ const Experience = () => {
                 <li>Reposición y control de stock, garantizando la correcta exhibición de productos</li>
                 <li>Registro de movimientos, seguimiento de inventario y carga de datos</li>
               </ul>
-            </div>
+            </motion.div>
             
-            <div className="experience-item">
+            <motion.div 
+              className="experience-item"
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.5 }}
+            >
               <h3>Administrativo - Uno Fitness Center</h3>
               <p className="experience-period">Marzo 2022 - Mayo 2023</p>
               <p className="experience-location">Rosario, Santa Fe</p>
@@ -34,22 +60,30 @@ const Experience = () => {
                 <li>Gestión de redes sociales institucionales, incluyendo publicaciones y atención de consultas</li>
                 <li>Profesor a cargo de clases grupales e individuales en disciplinas fitness</li>
               </ul>
-            </div>
+            </motion.div>
           </div>
           
-          <div className="cv-download">
+          <motion.div 
+            className="cv-download"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.7 }}
+          >
             <h4 className="cv-title">¿Quieres saber más sobre mi experiencia?</h4>
-            <a 
+            <motion.a 
               href="/DaniloPalermoCV.pdf" 
               className="download-cv" 
               download="DaniloPalermoCV.pdf"
               target="_blank"
               rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
               <FaDownload className="download-icon" />
               Descargar CV
-            </a>
-          </div>
+            </motion.a>
+          </motion.div>
         </div>
       </div>
     </section>

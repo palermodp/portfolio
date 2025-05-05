@@ -1,18 +1,39 @@
 import './Projects.css';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import bijouImage from '../../assets/images/Bijou.png';
-import bookImage from '../../assets/images/FullstackBook.png'; // Asegúrate de tener esta imagen
+import bookImage from '../../assets/images/FullstackBook.png';
+import { motion } from 'framer-motion';
 
 const Projects = () => {
   return (
     <section id="projects" className="projects">
       <div className="projects-content">
-        <h2>Mis Proyectos</h2>
+        <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          Mis Proyectos
+        </motion.h2>
         <div className="projects-grid">
-          <div className="project-card">
-            <div className="project-image">
+          <motion.div 
+            className="project-card"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            whileHover={{ 
+              scale: 1.02,
+              transition: { duration: 0.2 }
+            }}
+          >
+            <motion.div 
+              className="project-image"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
+            >
               <img src={bijouImage} alt="Proyecto Bijou Boutique" />
-            </div>
+            </motion.div>
             <div className="project-info">
               <h3>Bijou Boutique</h3>
               <p>E-commerce de joyería desarrollado con JavaScript, HTML y CSS. Implementa carrito de compras, gestión de productos en base de datos y diseño responsive para una experiencia de compra óptima. Backend construido con Express.
@@ -30,12 +51,26 @@ const Projects = () => {
                 </a>
               </div>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="project-card">
-            <div className="project-image">
+          <motion.div 
+            className="project-card"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            whileHover={{ 
+              scale: 1.02,
+              transition: { duration: 0.2 }
+            }}
+          >
+            <motion.div 
+              className="project-image"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
+            >
               <img src={bookImage} alt="Proyecto Full Stack Book" />
-            </div>
+            </motion.div>
             <div className="project-info">
               <h3>Full Stack Book</h3>
               <p>Plataforma educativa diseñada para principiantes en el mundo de la informática. Ofrece recursos de aprendizaje, guías paso a paso y contenido adaptado tanto para personas sin experiencia como para aquellos que buscan fortalecer sus conocimientos. Desarrollada con React, Node.js y Express.</p>
@@ -52,7 +87,7 @@ const Projects = () => {
                 </a>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

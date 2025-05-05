@@ -4,6 +4,7 @@ import {
   FaPython, FaVuejs 
 } from 'react-icons/fa';
 import { SiMysql } from 'react-icons/si';
+import { motion } from 'framer-motion';
 
 const TechCarousel = () => {
   const technologies = [
@@ -19,19 +20,32 @@ const TechCarousel = () => {
   ];
 
   return (
-    <div className="tech-carousel">
+    <motion.div 
+      className="tech-carousel"
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+    >
       <div className="carousel-track">
         {[...technologies, ...technologies].map((tech, index) => {
           const Icon = tech.icon;
           return (
-            <div key={`${tech.name}-${index}`} className="tech-item">
+            <motion.div 
+              key={`${tech.name}-${index}`} 
+              className="tech-item"
+              whileHover={{ 
+                scale: 1.1,
+                transition: { duration: 0.2 }
+              }}
+              whileTap={{ scale: 0.95 }}
+            >
               <Icon style={{ color: tech.color }} />
               <span>{tech.name}</span>
-            </div>
+            </motion.div>
           );
         })}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
