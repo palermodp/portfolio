@@ -6,31 +6,24 @@ const Experience = () => {
   return (
     <section id="experience" className="experience">
       <div className="experience-content">
-        <motion.h2
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          Experiencia
-        </motion.h2>
+        <div className="title-wrapper">
+          <h2>Experiencia</h2>
+        </div>
         
         <div className="experience-container">
-          <motion.h3 
-            className="experience-section-title"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            Últimas Experiencias Laborales
-          </motion.h3>
+          <div className="title-wrapper">
+            <h3 className="experience-section-title">
+              Últimas Experiencias Laborales
+            </h3>
+          </div>
           
           <div className="experience-info">
             <motion.div 
               className="experience-item"
-              initial={{ opacity: 0, x: -100 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.3 }}
+              transition={{ duration: 0.5 }}
             >
               <h3>Encargado de Depósito y Administrativo - Le utthe</h3>
               <p className="experience-period">Mayo 2023 - Actualidad</p>
@@ -45,10 +38,10 @@ const Experience = () => {
             
             <motion.div 
               className="experience-item"
-              initial={{ opacity: 0, x: -100 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.5 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
             >
               <h3>Administrativo - Uno Fitness Center</h3>
               <p className="experience-period">Marzo 2022 - Mayo 2023</p>
@@ -63,27 +56,19 @@ const Experience = () => {
             </motion.div>
           </div>
           
-          <motion.div 
-            className="cv-download"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.7 }}
-          >
+          <div className="cv-download">
             <h4 className="cv-title">¿Quieres saber más sobre mi experiencia?</h4>
-            <motion.a 
+            <a 
               href="/DaniloPalermoCV.pdf" 
               className="download-cv" 
               download="DaniloPalermoCV.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
             >
               <FaDownload className="download-icon" />
               Descargar CV
-            </motion.a>
-          </motion.div>
+            </a>
+          </div>
         </div>
       </div>
     </section>

@@ -26,25 +26,36 @@ const TechCarousel = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
-      <div className="carousel-track">
-        {[...technologies, ...technologies].map((tech, index) => {
+      <motion.div 
+        className="carousel-track"
+        animate={{ 
+          x: [0, -50 * technologies.length], 
+        }}
+        transition={{ 
+          duration: 20,
+          repeat: Infinity,
+          ease: "linear",
+          repeatType: "loop"
+        }}
+      >
+        {[...technologies, ...technologies, ...technologies].map((tech, index) => {
           const Icon = tech.icon;
           return (
             <motion.div 
               key={`${tech.name}-${index}`} 
               className="tech-item"
               whileHover={{ 
-                scale: 1.1,
+                scale: 1.2,
                 transition: { duration: 0.2 }
               }}
               whileTap={{ scale: 0.95 }}
             >
-              <Icon style={{ color: tech.color }} />
+              <Icon style={{ color: tech.color, fontSize: "2.5rem" }} />
               <span>{tech.name}</span>
             </motion.div>
           );
         })}
-      </div>
+      </motion.div>
     </motion.div>
   );
 };
