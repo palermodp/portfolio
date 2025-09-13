@@ -1,0 +1,161 @@
+<svg width="400" height="250" viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a2e1a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2d4a2d;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="nodeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#68a063;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3c873c;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="serverGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="apiGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/> 
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="250" fill="url(#bgGradient)" rx="15"/>
+  
+  <!-- Title -->
+  <text x="200" y="35" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="18" font-weight="bold" opacity="0.9">Node.js Backend</text>
+  
+  <!-- Node.js logo -->
+  <g transform="translate(200, 80)">
+    <!-- Node.js hexagon shape -->
+    <path d="M-25 -14.4 L-25 14.4 L0 28.8 L25 14.4 L25 -14.4 L0 -28.8 Z" fill="url(#nodeGradient)" filter="url(#glow)"/>
+    
+    <!-- Node.js internal design -->
+    <path d="M-15 -8.6 L-15 8.6 L0 17.3 L15 8.6 L15 -8.6 L0 -17.3 Z" fill="none" stroke="#2d4a2d" stroke-width="2" opacity="0.6"/>
+    
+    <!-- Central dot -->
+    <circle cx="0" cy="0" r="4" fill="#2d4a2d" opacity="0.8"/>
+  </g>
+  
+  <!-- Server architecture -->
+  <g transform="translate(80, 140)">
+    <!-- Server stack -->
+    <rect x="0" y="0" width="50" height="8" rx="4" fill="url(#serverGradient)" opacity="0.9"/>
+    <rect x="0" y="12" width="50" height="8" rx="4" fill="url(#serverGradient)" opacity="0.7"/>
+    <rect x="0" y="24" width="50" height="8" rx="4" fill="url(#serverGradient)" opacity="0.5"/>
+    
+    <!-- Server label -->
+    <text x="25" y="45" text-anchor="middle" fill="url(#serverGradient)" font-family="monospace" font-size="10" font-weight="bold">Server</text>
+  </g>
+  
+  <!-- API endpoints -->
+  <g transform="translate(320, 140)">
+    <!-- API routes -->
+    <rect x="0" y="0" width="40" height="6" rx="3" fill="url(#apiGradient)" opacity="0.9"/>
+    <rect x="0" y="10" width="35" height="6" rx="3" fill="url(#apiGradient)" opacity="0.8"/>
+    <rect x="0" y="20" width="45" height="6" rx="3" fill="url(#apiGradient)" opacity="0.7"/>
+    <rect x="0" y="30" width="30" height="6" rx="3" fill="url(#apiGradient)" opacity="0.6"/>
+    
+    <!-- API label -->
+    <text x="22" y="50" text-anchor="middle" fill="url(#apiGradient)" font-family="monospace" font-size="10" font-weight="bold">API</text>
+  </g>
+  
+  <!-- Backend technologies -->
+  <g transform="translate(50, 180)">
+    <!-- Express -->
+    <rect x="0" y="0" width="60" height="18" rx="9" fill="url(#nodeGradient)" opacity="0.8"/>
+    <text x="30" y="12" text-anchor="middle" fill="white" font-family="monospace" font-size="9" font-weight="bold">Express</text>
+  </g>
+  
+  <g transform="translate(125, 180)">
+    <!-- MongoDB -->
+    <rect x="0" y="0" width="65" height="18" rx="9" fill="url(#serverGradient)" opacity="0.8"/>
+    <text x="32" y="12" text-anchor="middle" fill="white" font-family="monospace" font-size="8" font-weight="bold">MongoDB</text>
+  </g>
+  
+  <g transform="translate(205, 180)">
+    <!-- REST API -->
+    <rect x="0" y="0" width="55" height="18" rx="9" fill="url(#apiGradient)" opacity="0.8"/>
+    <text x="27" y="12" text-anchor="middle" fill="white" font-family="monospace" font-size="9" font-weight="bold">REST</text>
+  </g>
+  
+  <g transform="translate(275, 180)">
+    <!-- JWT -->
+    <rect x="0" y="0" width="40" height="18" rx="9" fill="url(#nodeGradient)" opacity="0.7"/>
+    <text x="20" y="12" text-anchor="middle" fill="white" font-family="monospace" font-size="9" font-weight="bold">JWT</text>
+  </g>
+  
+  <g transform="translate(330, 180)">
+    <!-- Auth -->
+    <rect x="0" y="0" width="45" height="18" rx="9" fill="url(#serverGradient)" opacity="0.7"/>
+    <text x="22" y="12" text-anchor="middle" fill="white" font-family="monospace" font-size="8" font-weight="bold">Auth</text>
+  </g>
+  
+  <!-- Data flow arrows -->
+  <g transform="translate(140, 140)" opacity="0.6">
+    <path d="M0 0 L20 0 M17 -3 L20 0 L17 3" stroke="url(#serverGradient)" stroke-width="2" fill="none"/>
+    <path d="M30 0 L50 0 M47 -3 L50 0 L47 3" stroke="url(#serverGradient)" stroke-width="2" fill="none"/>
+  </g>
+  
+  <g transform="translate(210, 140)" opacity="0.6">
+    <path d="M0 0 L20 0 M17 -3 L20 0 L17 3" stroke="url(#apiGradient)" stroke-width="2" fill="none"/>
+    <path d="M30 0 L50 0 M47 -3 L50 0 L47 3" stroke="url(#apiGradient)" stroke-width="2" fill="none"/>
+  </g>
+  
+  <!-- Network connections -->
+  <g transform="translate(150, 100)" opacity="0.4">
+    <line x1="0" y1="0" x2="20" y2="-10" stroke="url(#nodeGradient)" stroke-width="2" stroke-dasharray="3,3"/>
+    <line x1="0" y1="0" x2="20" y2="10" stroke="url(#nodeGradient)" stroke-width="2" stroke-dasharray="3,3"/>
+    <line x1="0" y1="0" x2="30" y2="0" stroke="url(#nodeGradient)" stroke-width="2" stroke-dasharray="3,3"/>
+  </g>
+  
+  <g transform="translate(230, 100)" opacity="0.4">
+    <line x1="0" y1="0" x2="20" y2="-10" stroke="url(#nodeGradient)" stroke-width="2" stroke-dasharray="3,3"/>
+    <line x1="0" y1="0" x2="20" y2="10" stroke="url(#nodeGradient)" stroke-width="2" stroke-dasharray="3,3"/>
+    <line x1="0" y1="0" x2="30" y2="0" stroke="url(#nodeGradient)" stroke-width="2" stroke-dasharray="3,3"/>
+  </g>
+  
+  <!-- Performance indicators -->
+  <g transform="translate(30, 50)" opacity="0.3">
+    <circle cx="0" cy="0" r="4" fill="url(#nodeGradient)"/>
+    <circle cx="0" cy="0" r="8" fill="none" stroke="url(#nodeGradient)" stroke-width="1">
+      <animate attributeName="r" values="8;12;8" dur="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;0;0.3" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <g transform="translate(370, 50)" opacity="0.3">
+    <circle cx="0" cy="0" r="4" fill="url(#serverGradient)"/>
+    <circle cx="0" cy="0" r="8" fill="none" stroke="url(#serverGradient)" stroke-width="1">
+      <animate attributeName="r" values="8;12;8" dur="2.5s" repeatCount="indefinite" begin="1.2s"/>
+      <animate attributeName="opacity" values="0.3;0;0.3" dur="2.5s" repeatCount="indefinite" begin="1.2s"/>
+    </circle>
+  </g>
+  
+  <!-- Database connection -->
+  <g transform="translate(200, 210)" opacity="0.4">
+    <!-- Database cylinder -->
+    <ellipse cx="0" cy="-5" rx="15" ry="4" fill="url(#serverGradient)" opacity="0.8"/>
+    <rect x="-15" y="-5" width="30" height="10" fill="url(#serverGradient)" opacity="0.6"/>
+    <ellipse cx="0" cy="5" rx="15" ry="4" fill="url(#serverGradient)" opacity="0.8"/>
+    
+    <!-- Database label -->
+    <text x="0" y="20" text-anchor="middle" fill="url(#serverGradient)" font-family="monospace" font-size="9" font-weight="bold">Database</text>
+  </g>
+  
+  <!-- Code brackets -->
+  <g transform="translate(50, 80)" opacity="0.5">
+    <path d="M0 -8 L-6 -8 L-6 8 L0 8" stroke="url(#nodeGradient)" stroke-width="2" fill="none" stroke-linecap="round"/>
+  </g>
+  
+  <g transform="translate(350, 80)" opacity="0.5">
+    <path d="M0 -8 L6 -8 L6 8 L0 8" stroke="url(#nodeGradient)" stroke-width="2" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>

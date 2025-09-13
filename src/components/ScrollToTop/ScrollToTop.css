@@ -2,12 +2,12 @@
   position: fixed;
   bottom: 2rem;
   right: 2rem; 
-  background-color: #f5f5eb; 
-  color: #1B4D3E;
+  background-color: var(--bg-card);
+  color: var(--accent-color);
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  border: 2px solid #1B4D3E;
+  border: 2px solid var(--accent-color);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -16,19 +16,19 @@
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-medium);
   z-index: 1000;
 }
 
 @keyframes pulse {
   0% {
-    box-shadow: 0 0 0 0 rgba(245, 245, 235, 0.7);
+    box-shadow: 0 0 0 0 var(--shadow-accent);
   }
   70% {
-    box-shadow: 0 0 0 10px rgba(245, 245, 235, 0);
+    box-shadow: 0 0 0 10px rgba(72, 101, 129, 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(245, 245, 235, 0);
+    box-shadow: 0 0 0 0 rgba(72, 101, 129, 0);
   }
 }
 
@@ -39,34 +39,12 @@
 }
 
 .scroll-to-top:hover {
-  background-color: #1B4D3E;
-  color: #f5f5eb;
+  background-color: var(--accent-color);
+  color: var(--text-light);
   transform: translateY(-3px);
 }
 
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(245, 245, 235, 0.7);
-  }
-  70% {
-    box-shadow: 0 0 0 10px rgba(245, 245, 235, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(245, 245, 235, 0);
-  }
-}
-
-.scroll-to-top.visible {
-  opacity: 1;
-  visibility: visible;
-  animation: pulse 2s infinite;
-}
-
-.scroll-to-top:hover {
-  background-color: #1B4D3E;
-  color: #f5f5eb;
-  transform: translateY(-3px);
-}
+/* Código duplicado eliminado - ya está definido arriba */
 
 
 @media (max-width: 1024px) {
@@ -81,13 +59,13 @@
 
   @keyframes pulse {
     0% {
-      box-shadow: 0 0 0 0 rgba(245, 245, 235, 0.7);
+      box-shadow: 0 0 0 0 var(--shadow-accent);
     }
     70% {
-      box-shadow: 0 0 0 15px rgba(245, 245, 235, 0);
+      box-shadow: 0 0 0 15px rgba(72, 101, 129, 0);
     }
     100% {
-      box-shadow: 0 0 0 0 rgba(245, 245, 235, 0);
+      box-shadow: 0 0 0 0 rgba(72, 101, 129, 0);
     }
   }
 }

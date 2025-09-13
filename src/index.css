@@ -1,8 +1,133 @@
+:root {
+  /* Sistema de Colores Unificado - Tema Claro */
+  /* Primary Colors (Deep Navy Blue) - Azul marino profundo y elegante */
+  --primary-50: #f0f4f8;
+  --primary-100: #d9e2ec;
+  --primary-200: #bcccdc;
+  --primary-300: #9fb3c8;
+  --primary-400: #829ab1;
+  --primary-500: #627d98;
+  --primary-600: #486581;
+  --primary-700: #334e68;
+  --primary-800: #243b53;
+  --primary-900: #102a43;
+  
+  /* Colores Neutros */
+  --neutral-50: #fafafa;
+  --neutral-100: #f5f5f5;
+  --neutral-200: #e5e5e5;
+  --neutral-300: #d4d4d4;
+  --neutral-400: #a3a3a3;
+  --neutral-500: #737373;
+  --neutral-600: #525252;
+  --neutral-700: #404040;
+  --neutral-800: #262626;
+  --neutral-900: #171717;
+  
+  /* Variables de Aplicación */
+  --bg-primary: var(--neutral-50);
+  --bg-secondary: #ffffff;
+  --bg-accent: var(--primary-600);
+  --bg-card: #ffffff;
+  --bg-hover: var(--primary-50);
+  
+  --text-primary: var(--neutral-900);
+  --text-secondary: var(--neutral-600);
+  --text-muted: var(--neutral-500);
+  --text-light: #ffffff;
+  --text-accent: var(--primary-600);
+  
+  --accent-color: var(--primary-800);
+  --accent-hover: var(--primary-700);
+  --accent-light: var(--primary-100);
+  --accent-color-rgb: 72, 101, 129;
+  
+  --border-color: var(--neutral-200);
+  --border-hover: var(--neutral-300);
+  
+  --shadow-light: rgba(0, 0, 0, 0.05);
+  --shadow-medium: rgba(0, 0, 0, 0.1);
+  --shadow-dark: rgba(0, 0, 0, 0.15);
+  --shadow-accent: rgba(72, 101, 129, 0.3);
+}
+
+.dark-theme {
+  /* Sistema de Colores Unificado - Tema Oscuro */
+  --bg-primary: var(--neutral-900);
+  --bg-secondary: var(--neutral-800);
+  --bg-accent: var(--primary-800);
+  --bg-card: var(--neutral-800);
+  --bg-hover: var(--neutral-700);
+  
+  --text-primary: var(--neutral-50);
+  --text-secondary: var(--neutral-300);
+  --text-muted: var(--neutral-400);
+  --text-light: #ffffff;
+  --text-accent: var(--primary-400);
+  
+  --accent-color: var(--primary-800);
+  --accent-hover: var(--primary-700);
+  --accent-light: var(--primary-900);
+  --accent-color-rgb: 72, 101, 129;
+  
+  --border-color: var(--neutral-700);
+  --border-hover: var(--neutral-600);
+  
+  --shadow-light: rgba(0, 0, 0, 0.2);
+  --shadow-medium: rgba(0, 0, 0, 0.3);
+  --shadow-dark: rgba(0, 0, 0, 0.4);
+  --shadow-accent: rgba(72, 101, 129, 0.2);
+}
+
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
 body {
   margin: 0;
   padding: 0;
   width: 100%;
   min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Focus styles for accessibility */
+*:focus {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+/* Skip link for screen readers */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--accent-color);
+  color: var(--text-light);
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 6px;
 }
 
 #root {

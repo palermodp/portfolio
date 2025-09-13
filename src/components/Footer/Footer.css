@@ -1,5 +1,5 @@
 .footer {
-  background-color: #1B4D3E;
+  background-color: var(--bg-accent);
   padding: 2rem;
   width: 100%;
   box-sizing: border-box;
@@ -12,7 +12,7 @@
 }
 
 .footer-text {
-  color: #f5f5eb;
+  color: var(--text-light);
   font-size: 1rem;
 }
 
@@ -21,14 +21,15 @@
 }
 
 .heart-icon {
-  color: #ff6b6b;
+  color: var(--accent-hover);
   margin: 0 0.5rem;
   animation: heartbeat 1.5s ease infinite;
 }
 
 .copyright {
   font-size: 0.9rem;
-  color: #e8e8d8;
+  color: var(--text-light);
+  opacity: 0.8;
 }
 
 @keyframes heartbeat {

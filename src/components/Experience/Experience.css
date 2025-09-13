@@ -1,9 +1,9 @@
 .experience {
   padding: 4rem 2rem;
-  background-color: #f7f7f2; 
+  background-color: var(--bg-secondary);
   width: 100%;
   position: relative;
-  border-top: 2px solid rgba(27, 77, 62, 0.15);
+  border-top: 2px solid var(--border-color);
 }
 
 .experience-content {
@@ -13,7 +13,7 @@
 }
 
 .experience h2 {
-  color: #1B4D3E;
+  color: var(--text-primary);
   font-size: 2.5rem;
   margin-bottom: 2rem;
   text-align: center;
@@ -29,7 +29,7 @@
   transform: translateX(-50%);
   width: 10%;
   height: 3px;
-  background-color: #1B4D3E;
+  background-color: var(--accent-color);
   border-radius: 2px;
 }
 
@@ -41,7 +41,7 @@
 }
 
 .experience-section-title {
-  color: #1B4D3E;
+  color: var(--text-primary);
   font-size: 1.8rem;
   margin-bottom: 2rem;
   text-align: center;
@@ -57,7 +57,7 @@
   transform: translateX(-50%);
   width: 60px;
   height: 3px;
-  background-color: #1B4D3E;
+  background-color: var(--accent-color);
   border-radius: 2px;
 }
 
@@ -71,8 +71,8 @@
 }
 
 .experience-item {
-  background: #ffffff;
-  border: 1px solid rgba(27, 77, 62, 0.1);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
   border-radius: 15px;
   padding: 2rem;
   transition: all 0.3s ease;
@@ -88,19 +88,19 @@
   left: 0;
   width: 4px;
   height: 100%;
-  background: linear-gradient(to bottom, #1B4D3E, #2C6E5B);
+  background: linear-gradient(to bottom, var(--accent-color), var(--accent-hover));
   border-radius: 15px 0 0 15px;
 }
 
 .experience-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(27, 77, 62, 0.1);
+  box-shadow: 0 10px 20px var(--shadow-accent);
 }
 
 .experience-period {
   display: inline-block;
-  background-color: rgba(27, 77, 62, 0.1);
-  color: #1B4D3E;
+  background-color: var(--accent-light);
+  color: var(--text-accent);
   padding: 0.5rem 1rem;
   border-radius: 20px;
   font-weight: 500;
@@ -108,7 +108,7 @@
 }
 
 .experience-location {
-  color: #666;
+  color: var(--text-secondary);
   font-style: italic;
   margin-bottom: 1rem;
 }
@@ -129,19 +129,19 @@
   content: '→';
   position: absolute;
   left: 0;
-  color: #1B4D3E;
+  color: var(--accent-color);
 }
 
 .cv-download {
   text-align: center;
   margin-top: 3rem;
   padding: 2rem;
-  background: rgba(27, 77, 62, 0.05);
+  background: var(--accent-light);
   border-radius: 15px;
 }
 
 .cv-title {
-  color: #1B4D3E;
+  color: var(--text-primary);
   font-size: 1.2rem;
   margin-bottom: 1rem;
 }
@@ -150,8 +150,8 @@
   display: inline-flex;
   align-items: center;
   gap: 0.8rem;
-  background-color: #1B4D3E;
-  color: #f5f5eb;
+  background-color: var(--accent-color);
+  color: var(--text-light);
   padding: 1rem 2rem;
   border-radius: 25px;
   text-decoration: none;
@@ -160,9 +160,9 @@
 }
 
 .download-cv:hover {
-  background-color: #2C6E5B;
+  background-color: var(--accent-hover);
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(27, 77, 62, 0.2);
+  box-shadow: 0 5px 15px var(--shadow-accent);
 }
 
 .download-icon {

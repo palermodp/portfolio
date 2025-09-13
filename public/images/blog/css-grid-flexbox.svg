@@ -1,0 +1,115 @@
+<svg width="400" height="250" viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a2332;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2d4a3e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gridGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e40af;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="flexGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d97706;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/> 
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="250" fill="url(#bgGradient)" rx="15"/>
+  
+  <!-- Title -->
+  <text x="200" y="35" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="18" font-weight="bold" opacity="0.9">CSS Grid vs Flexbox</text>
+  
+  <!-- CSS Grid Section -->
+  <g transform="translate(50, 60)">
+    <!-- Grid container -->
+    <rect x="0" y="0" width="120" height="100" rx="8" fill="none" stroke="url(#gridGradient)" stroke-width="2" opacity="0.8"/>
+    
+    <!-- Grid items -->
+    <rect x="10" y="10" width="30" height="25" rx="4" fill="url(#gridGradient)" opacity="0.9" filter="url(#glow)"/>
+    <rect x="50" y="10" width="30" height="25" rx="4" fill="url(#gridGradient)" opacity="0.7"/>
+    <rect x="90" y="10" width="20" height="25" rx="4" fill="url(#gridGradient)" opacity="0.8"/>
+    
+    <rect x="10" y="45" width="45" height="20" rx="4" fill="url(#gridGradient)" opacity="0.6"/>
+    <rect x="65" y="45" width="45" height="20" rx="4" fill="url(#gridGradient)" opacity="0.9"/>
+    
+    <rect x="10" y="75" width="100" height="15" rx="4" fill="url(#gridGradient)" opacity="0.7"/>
+    
+    <!-- Grid lines -->
+    <line x1="45" y1="5" x2="45" y2="95" stroke="url(#gridGradient)" stroke-width="1" opacity="0.3" stroke-dasharray="2,2"/>
+    <line x1="85" y1="5" x2="85" y2="95" stroke="url(#gridGradient)" stroke-width="1" opacity="0.3" stroke-dasharray="2,2"/>
+    <line x1="5" y1="40" x2="115" y2="40" stroke="url(#gridGradient)" stroke-width="1" opacity="0.3" stroke-dasharray="2,2"/>
+    <line x1="5" y1="70" x2="115" y2="70" stroke="url(#gridGradient)" stroke-width="1" opacity="0.3" stroke-dasharray="2,2"/>
+    
+    <!-- Label -->
+    <text x="60" y="120" text-anchor="middle" fill="url(#gridGradient)" font-family="monospace" font-size="14" font-weight="bold">CSS Grid</text>
+    <text x="60" y="135" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" opacity="0.7">2D Layout</text>
+  </g>
+  
+  <!-- VS Symbol -->
+  <g transform="translate(200, 110)">
+    <circle cx="0" cy="0" r="20" fill="none" stroke="white" stroke-width="2" opacity="0.5"/>
+    <text x="0" y="6" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold" opacity="0.8">VS</text>
+  </g>
+  
+  <!-- Flexbox Section -->
+  <g transform="translate(230, 60)">
+    <!-- Flex container -->
+    <rect x="0" y="0" width="120" height="100" rx="8" fill="none" stroke="url(#flexGradient)" stroke-width="2" opacity="0.8"/>
+    
+    <!-- Flex items in row -->
+    <rect x="10" y="15" width="25" height="30" rx="4" fill="url(#flexGradient)" opacity="0.9" filter="url(#glow)"/>
+    <rect x="45" y="15" width="30" height="30" rx="4" fill="url(#flexGradient)" opacity="0.7"/>
+    <rect x="85" y="15" width="25" height="30" rx="4" fill="url(#flexGradient)" opacity="0.8"/>
+    
+    <!-- Flex items in column -->
+    <rect x="15" y="55" width="90" height="12" rx="4" fill="url(#flexGradient)" opacity="0.6"/>
+    <rect x="15" y="73" width="90" height="12" rx="4" fill="url(#flexGradient)" opacity="0.8"/>
+    
+    <!-- Flex arrows -->
+    <path d="M35 30 L40 30 M38 28 L40 30 L38 32" stroke="url(#flexGradient)" stroke-width="1.5" opacity="0.6"/>
+    <path d="M75 30 L80 30 M78 28 L80 30 L78 32" stroke="url(#flexGradient)" stroke-width="1.5" opacity="0.6"/>
+    
+    <!-- Label -->
+    <text x="60" y="120" text-anchor="middle" fill="url(#flexGradient)" font-family="monospace" font-size="14" font-weight="bold">Flexbox</text>
+    <text x="60" y="135" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" opacity="0.7">1D Layout</text>
+  </g>
+  
+  <!-- Feature comparison -->
+  <g transform="translate(50, 180)">
+    <!-- Grid features -->
+    <circle cx="10" cy="0" r="3" fill="url(#gridGradient)"/>
+    <text x="20" y="4" fill="white" font-family="Arial, sans-serif" font-size="10" opacity="0.8">Complex layouts</text>
+    
+    <circle cx="10" cy="15" r="3" fill="url(#gridGradient)"/>
+    <text x="20" y="19" fill="white" font-family="Arial, sans-serif" font-size="10" opacity="0.8">2D positioning</text>
+  </g>
+  
+  <g transform="translate(230, 180)">
+    <!-- Flex features -->
+    <circle cx="10" cy="0" r="3" fill="url(#flexGradient)"/>
+    <text x="20" y="4" fill="white" font-family="Arial, sans-serif" font-size="10" opacity="0.8">Component layout</text>
+    
+    <circle cx="10" cy="15" r="3" fill="url(#flexGradient)"/>
+    <text x="20" y="19" fill="white" font-family="Arial, sans-serif" font-size="10" opacity="0.8">1D alignment</text>
+  </g>
+  
+  <!-- Decorative elements -->
+  <g transform="translate(20, 20)" opacity="0.2">
+    <path d="M0 0 L15 0 L15 15 L0 15 Z M5 5 L10 5 L10 10 L5 10 Z" fill="url(#gridGradient)"/>
+  </g>
+  
+  <g transform="translate(365, 20)" opacity="0.2">
+    <rect x="0" y="0" width="15" height="4" rx="2" fill="url(#flexGradient)"/>
+    <rect x="0" y="6" width="15" height="4" rx="2" fill="url(#flexGradient)"/>
+    <rect x="0" y="12" width="15" height="4" rx="2" fill="url(#flexGradient)"/>
+  </g>
+</svg>

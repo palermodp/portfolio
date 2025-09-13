@@ -13,7 +13,7 @@ const Experience = () => {
         <div className="experience-container">
           <div className="title-wrapper">
             <h3 className="experience-section-title">
-              Últimas Experiencias Laborales
+              Últimas experiencias laborales
             </h3>
           </div>
           
